@@ -45,3 +45,15 @@ ssh-add ~/.ssh/id_rsa
 # Add key to github ssh keys under Settings
 git config --global user.email "vsochat@stanford.edu"
 git config --global user.name "vsoch"
+
+# Anaconda for Python
+cd /home/vanessa/Downloads
+wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
+bash Anaconda2-4.2.0-Linux-x86_64.sh -b
+echo "PATH=$PATH:$HOME/anaconda3/bin" >> $HOME/.profile
+echo export PATH >> $HOME/.profile
+
+
+# Setup Kerberos for Sherlock
+sudo apt-get -y install krb5-user openssh-client # ** interactive **
+sudo curl -o /etc/krb5.conf https://web.stanford.edu/dept/its/support/kerberos/dist/krb5.conf
