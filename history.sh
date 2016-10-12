@@ -50,7 +50,7 @@ git config --global user.name "vsoch"
 cd /home/vanessa/Downloads
 wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
 bash Anaconda2-4.2.0-Linux-x86_64.sh -b
-echo "PATH=$PATH:$HOME/anaconda3/bin" >> $HOME/.profile
+echo "PATH=\$HOME/anaconda3/bin:\$PATH" >> $HOME/.profile
 echo export PATH >> $HOME/.profile
 
 
