@@ -33,6 +33,10 @@ sudo apt-get -y install linux-image-extra-$(uname -r) linux-image-extra-virtual
 sudo apt-get -y install docker-engine
 sudo service docker start
 sudo docker run hello-world
+sudo usermod -aG docker $USER
+
+# Docker-compose
+sudo apt -y install docker-compose
 
 # Vim
 sudo apt-get -y install vim
