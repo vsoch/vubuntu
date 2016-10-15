@@ -62,10 +62,11 @@ rm Anaconda2-4.2.0-Linux-x86_64.sh
 sudo apt-get -y install krb5-user openssh-client # ** interactive **
 sudo curl -o /etc/krb5.conf https://web.stanford.edu/dept/its/support/kerberos/dist/krb5.conf
 
-# Gimp
+# Gimp and inkscape
 sudo apt-get -y install gimp
 sudo apt-add-repository ppa:otto-kesselgulasch/gimp
 sudo apt-get update
+sudo apt-get -y install inkscape
 sudo apt-get -y install inkscape
 
 # Ruby
@@ -111,3 +112,7 @@ sudo -u postgres psql
 
 # Jekyll
 gem install jekyll
+gem install github-pages
+gem install jekyll-sass-converter
+
+rbenv rehash
