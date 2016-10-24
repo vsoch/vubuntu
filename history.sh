@@ -116,3 +116,16 @@ gem install github-pages
 gem install jekyll-sass-converter
 
 rbenv rehash
+
+# Install Singularity
+sudo apt-get install -y build-essential libtool autotools-dev automake autoconf
+cd /tmp
+git clone https://github.com/singularityware/singularity.git
+cd singularity
+./autogen.sh
+./configure --prefix=/usr/local --sysconfdir=/etc
+make
+sudo make install
+
+# Python packages (when anaconda3 is active)
+pip install simplejson
