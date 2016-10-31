@@ -53,7 +53,7 @@ git config --global user.name "vsoch"
 # Anaconda for Python
 cd /home/vanessa/Downloads
 wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
-bash Anaconda2-4.2.0-Linux-x86_64.sh -b
+bash Anaconda3-4.2.0-Linux-x86_64.sh -b
 echo "PATH=\$HOME/anaconda3/bin:\$PATH" >> $HOME/.profile
 echo export PATH >> $HOME/.profile
 rm Anaconda2-4.2.0-Linux-x86_64.sh
@@ -129,3 +129,4 @@ sudo make install
 
 # Python packages (when anaconda3 is active)
 pip install simplejson
+gem install travis
