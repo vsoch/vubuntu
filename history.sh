@@ -157,11 +157,11 @@ sudo apt-get -y install liblzma-dev  libblas-dev gfortran
 sudo apt-get -y install gcc-multilib
 sudo apt-get -y install gobjc++
 sudo apt-get -y install aptitude
-sudo aptitude -y install libreadline-dev
-sudo apt-get install libbz2-dev
-sudo apt-get install liblzma-dev
-sudo apt-get install libpcre3 libpcre3-dev
-sudo apt-get install libcurl4-openssl-dev
+sudo apt-get -y install libreadline-dev
+sudo apt-get -y install libbz2-dev
+sudo apt-get -y install liblzma-dev
+sudo apt-get -y install libpcre3 libpcre3-dev
+sudo apt-get -y install libcurl4-openssl-dev
 cd /home/vanessa/Packages
 wget https://cran.cnr.berkeley.edu/bin/linux/ubuntu/yakkety/r-base_3.3.2.orig.tar.gz
 tar -xzvf r-base_3.3.2.orig.tar.gz
@@ -169,3 +169,11 @@ cd R-3.3.2
 ./configure --enable-R-shlib=yes
 make
 sudo make install
+
+# Rstudio
+sudo apt-get install libgstreamer0.10-0
+sudo apt-get install libgstreamer-plugins-base0.10-dev
+wget https://download1.rstudio.org/rstudio-1.0.44-x86_64-fedora.tar.gz
+tar -xzvf rstudio-1.0.44-x86_64-fedora.tar.gz
+echo "export PATH=$PATH:/home/vanessa/Packages/rstudio-1.0.44/bin" >> ~/.profile
+source ~/.profile
