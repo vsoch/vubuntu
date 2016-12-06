@@ -57,6 +57,10 @@ bash Anaconda3-4.2.0-Linux-x86_64.sh -b
 echo "PATH=\$HOME/anaconda3/bin:\$PATH" >> $HOME/.profile
 echo export PATH >> $HOME/.profile
 rm Anaconda2-4.2.0-Linux-x86_64.sh
+wget https://repo.continuum.io/archive/Anaconda2-4.2.0-Linux-x86_64.sh
+bash Anaconda2-4.2.0-Linux-x86_64.sh -b
+rm Anaconda2-4.2.0-Linux-x86_64.sh
+
 
 # Setup Kerberos for Sherlock
 sudo apt-get -y install krb5-user openssh-client # ** interactive **
@@ -130,3 +134,38 @@ sudo make install
 # Python packages (when anaconda3 is active)
 pip install simplejson
 gem install travis
+
+# Install filezilla
+sudo apt-get -y install filezilla
+sudo apt-get -y install gftp
+
+# Install curl (updated)
+wget https://curl.haxx.se/download/curl-7.51.0.tar.gz
+tar -xzvf curl-7.51.0.tar.gz 
+cd curl-7.51.0 
+./configure --with-nghttp2 --enable-ldap --with-libmetalink
+make
+sudo make install
+
+# Java
+sudo apt-get install default-jdk
+
+# Install R Base and RStudio
+sudo apt-get -y install gfortran
+sudo apt-get -y install xorg-dev
+sudo apt-get -y install liblzma-dev  libblas-dev gfortran
+sudo apt-get -y install gcc-multilib
+sudo apt-get -y install gobjc++
+sudo apt-get -y install aptitude
+sudo aptitude -y install libreadline-dev
+sudo apt-get install libbz2-dev
+sudo apt-get install liblzma-dev
+sudo apt-get install libpcre3 libpcre3-dev
+sudo apt-get install libcurl4-openssl-dev
+cd /home/vanessa/Packages
+wget https://cran.cnr.berkeley.edu/bin/linux/ubuntu/yakkety/r-base_3.3.2.orig.tar.gz
+tar -xzvf r-base_3.3.2.orig.tar.gz
+cd R-3.3.2
+./configure --enable-R-shlib=yes
+make
+sudo make install
