@@ -184,3 +184,7 @@ echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee 
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 sudo apt-get update && sudo apt-get install google-cloud-sdk # **interactive**
 gcloud init
+
+# Singularity Dependencies
+sudo apt-get install -y automake autoconf libtool build-essential
+
