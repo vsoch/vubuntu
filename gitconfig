@@ -1,0 +1,14 @@
+[user]
+	name = Vanessa Sochat
+	email = vsochat@stanford.edu
+[core]
+	editor = nano
+[alias]
+	lg = log --graph
+	undo = reset --hard
+[color]
+	ui = true
+[github]
+	user = vsoch
+[commit]
+	gpgsign = true
