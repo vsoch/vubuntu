@@ -177,3 +177,14 @@ wget https://download1.rstudio.org/rstudio-1.0.44-x86_64-fedora.tar.gz
 tar -xzvf rstudio-1.0.44-x86_64-fedora.tar.gz
 echo "export PATH=$PATH:/home/vanessa/Packages/rstudio-1.0.44/bin" >> ~/.profile
 source ~/.profile
+
+# Google Cloud
+export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-get update && sudo apt-get install google-cloud-sdk # **interactive**
+gcloud init
+
+# Singularity Dependencies
+sudo apt-get install -y automake autoconf libtool build-essential
+
