@@ -188,3 +188,10 @@ gcloud init
 # Singularity Dependencies
 sudo apt-get install -y automake autoconf libtool build-essential
 
+# Helm
+wget https://storage.googleapis.com/kubernetes-helm/helm-v2.9.1-linux-amd64.tar.gz
+tar -xzvf helm-v2.9.1-linux-amd64.tar.gz
+sudo mv linux-amd64/helm /usr/local/bin/
+
+# Vue.js
+npm install -g @vue/cli
