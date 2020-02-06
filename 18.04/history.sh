@@ -16,10 +16,10 @@ ls -Ag
 fwupdmgr n2jul22w.zip
 fwupdmgr install n2jul22w.zip
 cd n2jul22w/
-ls
-# fwupdmgr install N2JET84w.cab
-# fwupdmgr install N2JET84W.cab
-# fwupdmgr install N2JHT33W.cab
+# ls
+fwupdmgr install N2JET84w.cab
+fwupdmgr install N2JET84W.cab
+fwupdmgr install N2JHT33W.cab
 sudo reboot
 
 # Install git and temperature sensors (sensors)
